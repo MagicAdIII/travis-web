@@ -10,7 +10,7 @@ export default V3Adapter.extend({
     const url = `${this.urlPrefix()}${data.branch}/cron`;
     return this.ajax(url, 'POST', {
       data: {
-        disable_by_build: data.disable_by_build,
+        run_only_when_new_commit: data.run_only_when_new_commit,
         interval: data.interval
       }
     });

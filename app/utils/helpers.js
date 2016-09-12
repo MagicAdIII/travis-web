@@ -12,6 +12,7 @@ var _emojize, _escape, _githubCommitReferenceLink, _githubCommitReferenceRegexp,
   intersect, mapObject, only, pathFrom, safe, timeAgoInWords, timeInWords, timeago;
 
 timeago = Ember.$.timeago;
+timeago.settings.allowFuture = true;
 
 mapObject = Ember.$.map;
 
