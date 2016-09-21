@@ -72,6 +72,7 @@ export default PageObject.create({
 
     item: {
       branchName: text('.branch-name'),
+      interval: text('.interval'),
       nextRun: text('.next-run'),
       lastRun: text('.last-run'),
       runOnlyWhenNewCommitText: text('.run-only-when-new-commit'),

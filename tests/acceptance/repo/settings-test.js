@@ -119,11 +119,13 @@ test('view settings', function (assert) {
     assert.equal(settingsPage.environmentVariables(1).value, '••••••••••••••••');
 
     assert.equal(settingsPage.crons(0).branchName, 'daily-branch');
+    assert.equal(settingsPage.crons(0).interval, 'daily');
     assert.equal(settingsPage.crons(0).lastRun, 'Last: less than a minute ago');
     assert.equal(settingsPage.crons(0).nextRun, 'Next: about 24 hours from now');
     assert.ok(settingsPage.crons(0).runOnlyWhenNewCommitText.indexOf('Always run') === 0, 'expected cron to run even if no new commit after last build');
 
     assert.equal(settingsPage.crons(1).branchName, 'weekly-branch');
+    assert.equal(settingsPage.crons(1).interval, 'weekly');
     assert.equal(settingsPage.crons(1).lastRun, 'Last: less than a minute ago');
     assert.equal(settingsPage.crons(1).nextRun, 'Next: 7 days from now');
     assert.ok(settingsPage.crons(1).runOnlyWhenNewCommitText.indexOf('Only if there is a new commit') === 0, 'expected cron to run Only if there is a new commit after last build');
